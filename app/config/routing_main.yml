@@ -1,0 +1,48 @@
+user_edit:
+  path:  /user/edit/{id}
+  defaults: { _controller: AppBundle:Routing:edit }
+  requirements:
+    id: '\d+'
+
+
+ejercicios_alumnos:
+  path: /ejercicios/alumnos/{id}/notas
+  defaults: { _controller: AppBundle:Default:ejercicioNotas }
+  requirements:
+    id: '\d+'
+
+ejercicios_form_asignaturas_index:
+  path: /asignaturas/
+  defaults: { _controller: AppBundle:Asignaturas:index }
+
+ejercicios_form_asignaturas_new:
+  path: /asignaturas/new
+  defaults: { _controller: AppBundle:Asignaturas:new }
+
+ejercicios_form_asignaturas_edit:
+  path: /asignaturas/edit
+  defaults: { _controller: AppBundle:Asignaturas:edit }
+
+ejercicios_form_asignaturas_delete:
+  path: /asignaturas/delete/{id}
+  defaults: { _controller: AppBundle:Asignaturas:delete }
+  requirements:
+    id: '\d+'
+
+ejercicios_form_grados_index:
+  path: /grados/
+  defaults: { _controller: AppBundle:Grados:index }
+
+ejercicios_form_grados_new:
+  path: /grados/new
+  defaults: { _controller: AppBundle:Grados:new }
+
+ejercicios_form_grados_edit:
+  path: /grados/edit/{id}
+  defaults: { _controller: AppBundle:Grados:edit, id: null }
+
+ejercicios_form_grados_delete:
+  path: /grados/delete/{id}
+  defaults: { _controller: AppBundle:Grados:delete }
+  requirements:
+    id: '\d+'
